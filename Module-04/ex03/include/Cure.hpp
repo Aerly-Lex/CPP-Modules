@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:00:45 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/13 13:59:25 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:36:04 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class AMateria;
 
 class Cure : public AMateria {
-	private:
 	public:
 		Cure();
 		~Cure();

@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:50:46 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/13 13:53:40 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:38:07 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 # define IMATERIASOURCE_HPP
 
 class IMateriaSource {
-	private:
 	public:
-		IMateriaSource() {};
 		virtual ~IMateriaSource() {};
-		// IMateriaSource(const IMateriaSource& other);
-		// IMateriaSource& operator=(const IMateriaSource& other);
-
-		virtual void		learnMateria(AMateria* m);
-		virtual AMateria*	createMateria(std::string const & type);
+		virtual void		learnMateria(AMateria* m) = 0;
+		virtual AMateria*	createMateria(std::string const & type) = 0;
 };
 
 #endif

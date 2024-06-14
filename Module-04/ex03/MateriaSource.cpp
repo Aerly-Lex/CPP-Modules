@@ -6,14 +6,11 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:34:39 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/13 12:59:52 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/14 11:00:41 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/headers.hpp"
-
-
-// class MateriaSource : public IMateriaSource
 
 MateriaSource::MateriaSource() {
 	for (int i = 0; i < 4; i++)
@@ -22,10 +19,14 @@ MateriaSource::MateriaSource() {
 
 MateriaSource::~MateriaSource() {
 	for (int i = 0; i < 4; i++)
+	{
 		delete templates[i];
+		// templates[i] = NULL;
+	}
 }
 
-// MateriaSource::MateriaSource(const MateriaSource& other);
+MateriaSource::MateriaSource(const MateriaSource& other) {
+}
 // MateriaSource& operator=(const MateriaSource& other);
 
 

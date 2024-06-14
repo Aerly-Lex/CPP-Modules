@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:00:18 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/13 13:59:22 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:35:55 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 #include "headers.hpp"
 
+class AMateria;
+
 class Ice : public AMateria {
-	private:
 	public:
 		Ice();
 		~Ice();

@@ -6,14 +6,12 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:57:48 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/13 13:58:36 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/14 10:59:23 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/headers.hpp"
 
-
-// class Ice : public AMateria
 Ice::Ice() : AMateria("Ice") {}
 
 Ice::~Ice() {}
