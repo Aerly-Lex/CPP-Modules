@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:44:20 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/07 14:45:26 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:41:59 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,19 @@ Animal& Animal::operator=(const Animal& other) {
 	return (*this);
 }
 
-void	Animal::makeSound() const {
+//			Methods & Functions			//
+
+void	Animal::makeSound() const
+{
 	std::cout << RED << "Some random animal sounds" << RESET << std::endl;
 }
 
-std::string	Animal::getType() const {
+std::string	Animal::getType() const
+{
 	return (this->type);
 }
 
-void	Animal::setType(std::string type) {
+void	Animal::setType(std::string type)
+{
 	this->type = type;
 }

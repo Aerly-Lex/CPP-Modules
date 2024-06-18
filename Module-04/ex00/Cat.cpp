@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:44:11 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/11 12:54:38 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:42:05 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ Cat& Cat::operator=(const Cat& other) {
 	return *this;
 }
 
-void Cat::makeSound() const {
+//			Methods & Functions			//
+
+void Cat::makeSound() const
+{
 	std::cout << YELLOW << "Meow" << RESET << std::endl;
 }

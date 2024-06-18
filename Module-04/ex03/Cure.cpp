@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:57:34 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/14 10:36:15 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:50:45 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,13 @@ Cure::Cure() : AMateria("cure") {}
 Cure::~Cure() {}
 
 Cure::Cure(const Cure& other) : AMateria(other) {
-	this->type = other.type;
+	// if (this != &other)
+	// 	this->type = other.type;
 }
 
 Cure& Cure::operator=(const Cure& other) {
 	if (this != &other)
-		this->type = other.type; // AMateria::operator=(other);
+		AMateria::operator=(other);
 	return (*this);
 }
 
@@ -30,6 +31,7 @@ Cure& Cure::operator=(const Cure& other) {
 
 AMateria*	Cure::clone() const
 {
+	std::cout << "Cure clone\n";
 	return (new Cure(*this));
 }
 

@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:01:51 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/11 13:38:18 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:43:11 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ WrongCat& WrongCat::operator=(const WrongCat& other) {
 	return (*this);
 }
 
-void WrongCat::makeSound() const {
+//			Methods & Functions			//
+
+void WrongCat::makeSound() const
+{
 	std::cout << YELLOW << "mRErRow" << RESET << std::endl;
 }

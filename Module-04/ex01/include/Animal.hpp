@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:43:12 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/12 08:18:44 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 12:00:17 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Animal {
 		std::string type;
 	public:
 		Animal();
-		virtual	~Animal();
+		virtual ~Animal();
 		Animal(const Animal& other);
 		Animal& operator=(const Animal& other);
 

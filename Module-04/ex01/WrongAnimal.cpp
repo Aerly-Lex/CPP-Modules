@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 13:01:54 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/11 13:35:51 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:43:06 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,19 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
 	return (*this);
 }
 
-void	WrongAnimal::makeSound() const {
+//			Methods & Functions			//
+
+void	WrongAnimal::makeSound() const
+{
 	std::cout << RED << "Some wrong random animal sounds" << RESET << std::endl;
 }
 
-void	WrongAnimal::setType(std::string type) {
+void	WrongAnimal::setType(std::string type)
+{
 	this->type = type;
 }
 
-std::string WrongAnimal::getType() const {
+std::string WrongAnimal::getType() const
+{
 	return (this->type);
 }

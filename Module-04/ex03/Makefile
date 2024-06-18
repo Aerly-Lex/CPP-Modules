@@ -4,7 +4,7 @@ NAME	= interface_Recap
 
 CXX		= c++
 
-CXXFLAGS	= #-Wall -Werror -Wextra -std=c++98 -pedantic -I include
+CXXFLAGS	= -Wall -Werror -Wextra -std=c++98 -pedantic -I include
 
 SRC		=	main.cpp \
 			AMateria.cpp \
@@ -25,7 +25,7 @@ $(OBJ_DIR)%.o: %.cpp
 
 $(NAME): $(OBJ_PREF)
 	$(CXX) $(CXXFLAGS) $(OBJ_PREF) -o $(NAME)
-	# clear
+	clear
 	@echo "\033[32mReady to run the program \"$(NAME)\"\033[0m"
 
 #################################################

@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 14:43:47 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/11 12:55:08 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 11:42:07 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@ Dog& Dog::operator=(const Dog& other) {
 	return (*this);
 }
 
-void	Dog::makeSound() const {
+//			Methods & Functions			//
+
+void	Dog::makeSound() const
+{
 	std::cout << CYAN << "Woof!" << RESET << std::endl;
 }

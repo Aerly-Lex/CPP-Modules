@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 09:57:48 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/14 10:59:23 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 17:50:42 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,11 @@ Ice::Ice() : AMateria("ice") {}
 
 Ice::~Ice() {}
 
-Ice::Ice(const Ice& other) : AMateria(other) {
-	this->type = other.type;
-}
+Ice::Ice(const Ice& other) : AMateria(other) {}
 
 Ice& Ice::operator=(const Ice& other) {
-	if (this != &other) {
-		this->type = other.type;
-	}
+	if (this != &other)
+		AMateria::operator=(other);
 	return (*this);
 }
 
@@ -31,6 +28,7 @@ Ice& Ice::operator=(const Ice& other) {
 
 AMateria*	Ice::clone() const
 {
+	std::cout << "Ice clone\n";
 	return (new Ice(*this));
 }
 

@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:22:23 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/14 10:56:15 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/17 10:56:19 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ Character::Character(std::string name) : name(name) {
 Character::~Character() {
 	for (int i = 0; i < 4; i++) {
 		delete inventory[i];
-		inventory[i] = NULL;
+		// inventory[i] = NULL;
 	}
 }
 
-Character::Character(const Character& other) : ICharacter(other), name(other.name) {
+// ICharacter(other),
+Character::Character(const Character& other) : name(other.name) {
 	for (int i = 0; i < 4; i++) {
 		if (other.inventory[i])
 			this->inventory[i] = other.inventory[i]->clone();
@@ -56,7 +57,8 @@ Character& Character::operator=(const Character& other)
 
 //			Methods & Functions			//
 
-std::string const&	Character::getName() const {
+std::string const&	Character::getName() const
+{
 	return (this->name);
 }
 
@@ -92,5 +94,5 @@ void	Character::use(int idx, ICharacter& target)
 	else if (this->inventory[idx] != NULL)
 		this->inventory[idx]->use(target);
 	else
-		std::cout << "It's already empty" << std::endl;
+		std::cout << "The slot is empty" << std::endl;
 }

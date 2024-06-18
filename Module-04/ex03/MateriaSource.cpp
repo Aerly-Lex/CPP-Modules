@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:34:39 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/06/14 11:00:41 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/06/18 10:03:09 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,33 @@ MateriaSource::~MateriaSource() {
 	for (int i = 0; i < 4; i++)
 	{
 		delete templates[i];
-		// templates[i] = NULL;
 	}
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other) {
+	for (int i = 0; i < 4; i++)
+	{
+		if (other.templates[i])
+			templates[i] = other.templates[i]->clone();
+		else
+			templates[i] = NULL;
+	}
 }
-// MateriaSource& operator=(const MateriaSource& other);
+
+MateriaSource& MateriaSource::operator=(const MateriaSource& other) {
+	if (this != &other)
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			delete templates[i];
+			if (other.templates[i])
+				templates[i] = other.templates[i]->clone();
+			else
+				templates[i] = NULL;
+		}
+	}
+	return (*this);
+}
 
 
 //			Methods & Functions			//
