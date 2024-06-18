@@ -13,10 +13,10 @@ Delving into Ad-hoc Polymorphism, Operator Overloading, and Orthodox Canonical C
 ### • [Module 03](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-03)
 Understanding Inheritance.
 
-<!--
 ### • [Module 04]()
 Exploring Subtype Polymorphism, Abstract Classes, and Interfaces.
 
+<!--
 ### • [Module 05]()
 Handling Repetition and Exceptions.
 
