@@ -13,13 +13,13 @@ Delving into Ad-hoc Polymorphism, Operator Overloading, and Orthodox Canonical C
 ### • [Module 03](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-03)
 Understanding Inheritance.
 
-### • [Module 04]()
+### • [Module 04](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-04)
 Exploring Subtype Polymorphism, Abstract Classes, and Interfaces.
 
-<!--
-### • [Module 05]()
+### • [Module 05](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-05)
 Handling Repetition and Exceptions.
 
+<!--
 ### • [Module 06]()
 Mastering C++ Casts.
 
