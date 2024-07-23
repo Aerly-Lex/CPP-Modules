@@ -19,10 +19,10 @@ Exploring Subtype Polymorphism, Abstract Classes, and Interfaces.
 ### • [Module 05](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-05)
 Handling Repetition and Exceptions.
 
-<!--
-### • [Module 06]()
+### • [Module 06](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-06)
 Mastering C++ Casts.
 
+<!--
 ### • [Module 07]()
 Working with C++ Templates.
 
