@@ -14,11 +14,9 @@
 # define SCALARCONVERTER_HPP
 
 #include <iostream>
-#include <cstdlib>	// strtod, atoi
-#include <climits>	// INT_MIN & INT_MAX
-#include <limits>	// numeric limits
-#include <cctype>	// isprint
-#include <cstring>	//	strcmp
+#include <climits>	//	INT_MIN & INT_MAX
+#include <limits>	//	numeric limits
+#include <sstream>	//	istringstream
 
 #define RESET	"\033[0m"
 #define BLACK	"\033[30m"
