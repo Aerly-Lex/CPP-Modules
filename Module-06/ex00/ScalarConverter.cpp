@@ -85,16 +85,28 @@ static void	convertToDouble(const double value)
 
 void	ScalarConverter::convert(std::string input)
 {
-	char*	end;
-	double	value = std::strtod(input.c_str(), &end);
+	double	value = 0;
 
-	if (*end != '\0' || end == input.c_str())
+	if (input.length() == 1 && std::isprint(input[0]) && !std::isdigit(input[0]))
 	{
-		std::cout << "Char: impossible" << std::endl;
-		std::cout << "Int: impossible" << std::endl;
-		std::cout << "Float: impossible" << std::endl;
-		std::cout << "Double: impossible" << std::endl;
-		return ;
+		value = static_cast<double>(input[0]);
+	}
+	else
+	{
+		char*	end;
+		value = std::strtod(input.c_str(), &end);
+
+		if (*end != '\0' || end == input.c_str())
+		{
+			if (std::strcmp(end, "f") != 0)
+			{
+				std::cout << "Char: impossible" << std::endl;
+				std::cout << "Int: impossible" << std::endl;
+				std::cout << "Float: impossible" << std::endl;
+				std::cout << "Double: impossible" << std::endl;
+				return ;
+			}
+		}
 	}
 
 	convertToChar(value);
