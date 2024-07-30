@@ -22,10 +22,10 @@ Handling Repetition and Exceptions.
 ### • [Module 06](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-06)
 Mastering C++ Casts.
 
-<!--
-### • [Module 07]()
+### • [Module 07](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-07)
 Working with C++ Templates.
 
+<!--
 ### • [Module 08]()
 More depth about Templates - Containers, Iterators, and Algorithms.
 
