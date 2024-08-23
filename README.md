@@ -25,9 +25,8 @@ Mastering C++ Casts.
 ### • [Module 07](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-07)
 Working with C++ Templates.
 
-<!--
-### • [Module 08]()
+### • [Module 08](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-08)
 More depth about Templates - Containers, Iterators, and Algorithms.
 
-### • [Module 09]()
+### • [Module 09](https://github.com/Aerly-Lex/CPP-Modules/tree/main/Module-09)
 Exploring the Versatility of STL for Enhanced C++ Programming. STL stands for "Standard Template Library" in C++.
