@@ -25,6 +25,24 @@ std::string	ft_replace(std::string line, std::string str1, std::string str2)
 	return (line);
 }
 
+std::string	ft_file_content(std::ifstream &infile)
+{
+	std::string	ret = "";
+	std::string	temp;
+
+	while (1)
+	{
+		if (std::getline(infile, temp))
+			ret += temp;
+		else
+			break ;
+		if (!infile.eof())
+			ret += "\n";
+	}
+
+	return (ret);
+}
+
 int	main(int argc, char **argv)
 {
 	if (argc != 4)
@@ -50,15 +68,11 @@ int	main(int argc, char **argv)
 		return (FAIL);
 	}
 
-	std::string line;
-	while (!inputFile.eof()) // UnformattedInputFunction - if getline reaches EOF it changes eofbit
-	{
-		std::getline(inputFile, line);
-		if (inputFile.eof())
-			outputFile << ft_replace(line, str1, str2);
-		else
-			outputFile << ft_replace(line, str1, str2) << std::endl;
-	}
+	// If the newline is part of the argument that has to be replaced, we simply cant read line by line
+	// We read entire file content
+	std::string	file_content = ft_file_content(inputFile);
+
+	outputFile << ft_replace(file_content, str1, str2);
 
 	inputFile.close();
 	outputFile.close();
