@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 12:12:13 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/08/21 11:40:50 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/08/28 10:57:37 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,9 +88,5 @@ void	RPN::processExpression(const std::string& expression)
 			std::cout << stack.top() << std::endl;
 	} catch (const std::runtime_error& e) {
 		std::cerr << e.what() << std::endl;
-		exit(1);
 	}
-
-	while (!stack.empty())
-		stack.pop();
 }

@@ -6,7 +6,7 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 12:10:14 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/08/20 10:19:07 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/08/28 09:58:23 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,20 @@ void	BitcoinExchange::loadExchangeData(const std::string &exchangeFile)
 	file.close();
 }
 
+double	BitcoinExchange::getExchangeData(const std::string &date)
+{
+	if (exchange.find(date) != exchange.end())
+		return exchange[date];
+
+	std::map<std::string, double>::iterator	it = exchange.lower_bound(date);
+	if (it != exchange.begin())
+	{
+		--it;
+		return it->second;
+	}
+	return -1;
+}
+
 void	BitcoinExchange::processFile(const std::string &inputFile)
 {
 	std::ifstream	file(inputFile.c_str());
@@ -61,8 +75,16 @@ void	BitcoinExchange::processFile(const std::string &inputFile)
 	}
 
 	std::string	line;
+	bool		firstLine = true;
+
 	while (std::getline(file, line))
 	{
+		if (firstLine)
+		{
+			firstLine = false;
+			continue ;
+		}
+
 		std::istringstream	iss(line);
 		std::string			date;
 		std::string			valueStr;
@@ -82,21 +104,6 @@ void	BitcoinExchange::processFile(const std::string &inputFile)
 			std::cout << date << " => " << value << " = " << (value * rate) << std::endl;
 		}
 		else
-			std::cout << invalidValues << " => " << date << std::endl;
-
+			std::cout << invalidValues << " => " << line << std::endl;
 	}
-}
-
-double	BitcoinExchange::getExchangeData(const std::string &date)
-{
-	if (exchange.find(date) != exchange.end())
-		return exchange[date];
-
-	std::map<std::string, double>::iterator	it = exchange.lower_bound(date);
-	if (it != exchange.begin())
-	{
-		--it;
-		return it->second;
-	}
-	return -1;
 }

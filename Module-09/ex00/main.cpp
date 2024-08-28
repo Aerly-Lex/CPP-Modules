@@ -6,13 +6,13 @@
 /*   By: Dscheffn <dscheffn@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 12:10:16 by Dscheffn          #+#    #+#             */
-/*   Updated: 2024/08/20 10:27:30 by Dscheffn         ###   ########.fr       */
+/*   Updated: 2024/08/28 09:58:46 by Dscheffn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/BitcoinExchange.hpp"
 
-int	main(int ac, char **av) // look at the output date  => 0 = 0 maybe remove that
+int	main(int ac, char **av)
 {
 	if (ac != 2) {
 		std::cout << invalidArguments;
