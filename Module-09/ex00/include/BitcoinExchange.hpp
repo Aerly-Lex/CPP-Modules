@@ -18,6 +18,7 @@
 #include <fstream>
 #include <sstream>
 #include <cstdlib>
+#include <iomanip>
 
 #define invalidFile			"Invalid file\n"
 #define invalidArguments	"Invalid numbers of Arguments - a filename as argument is required.\n"

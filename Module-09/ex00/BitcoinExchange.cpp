@@ -101,7 +101,7 @@ void	BitcoinExchange::processFile(const std::string &inputFile)
 				continue ;
 			}
 			double rate = getExchangeData(date);
-			std::cout << date << " => " << value << " = " << (value * rate) << std::endl;
+			std::cout << std::setprecision(15) << date << " => " << value << " = " << (value * rate) << std::endl;
 		}
 		else
 			std::cout << invalidValues << " => " << line << std::endl;
